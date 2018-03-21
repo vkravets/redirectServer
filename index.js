@@ -18,7 +18,7 @@ const _request = url => new Promise((resolve, reject) => {
 ((options = {
   host: '0.0.0.0',
   port: process.env.PORT || 8080,
-  server: 'http://xidea.online',
+  server: '<server-ip>',
 }) => {
   console.info('Starting server...');
 
@@ -54,7 +54,7 @@ const _request = url => new Promise((resolve, reject) => {
 
   server.on('listening', () => {
     console.info(`Redirecting requests to ${options.server}`);
-    console.info(`Listening on http://${options.host}:${options.port} <- Use this url to register your product`);
+    console.info(`Listening on http://${options.host}:${options.port} <- Use this url for accessing on local machine`);
   });
 
   process.on('SIGTERM', stop);
